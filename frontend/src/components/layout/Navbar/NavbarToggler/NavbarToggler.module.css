@@ -1,0 +1,29 @@
+.container {
+  display: none;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+
+@media (max-width: 750px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bar {
+    height: 0.25vmax;
+    width: 3vmax;
+    background-color: var(--accentColor);
+    border-radius: 1vmax;
+    transition: all 0.2s ease-in-out;
+    margin: 0.25vmax 0;
+  }
+
+  .expanded {
+    margin-top: 1.25vmax;
+  }
+}

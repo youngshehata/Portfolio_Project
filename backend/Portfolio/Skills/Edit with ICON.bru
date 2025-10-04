@@ -1,0 +1,30 @@
+meta {
+  name: Edit with ICON
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/skills/icon/4
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"Fastify",
+    "icon":"ff.svg",
+    "showOnPortfolio":true
+  }
+}
+
+body:multipart-form {
+  name: UpdatedName
+  type: skills
+  showOnPortfolio: true
+  ~file: @file(D:\Work\Pics\SVG-Background.svg)
+}
+
+settings {
+  encodeUrl: true
+}

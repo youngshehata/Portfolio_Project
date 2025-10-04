@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--primColor);
+  width: 60%;
+  font-size: 1.3vmax;
+  padding: 0.3vmax 1vmax;
+  border: 0.15vmax var(--oppositColor) solid;
+  border-radius: 0.35vmax;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--darkBorder) 2px 2px 3px;
+}
+
+.button:hover {
+  background-color: var(--accentColor);
+  color: var(--primColor);
+  border-color: var(--primColor);
+}
+
+.secondButton {
+  margin-top: 1vmax;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .container {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    margin-top: 1vmax;
+  }
+  .button {
+    width: 60%;
+    font-size: 2vmax;
+    padding: 0.3vmax 1vmax;
+    border: 0.15vmax var(--oppositColor) solid;
+    border-radius: 0.5vmax;
+    cursor: pointer;
+  }
+  .secondButton {
+    margin-top: 1.5vmax;
+  }
+}

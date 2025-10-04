@@ -1,0 +1,25 @@
+meta {
+  name: Create Contact
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/contacts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"Github",
+    "value":"https://github.com",
+    "icon":"github.svg",
+    "showOnHome":true,
+    "showOnContact":true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

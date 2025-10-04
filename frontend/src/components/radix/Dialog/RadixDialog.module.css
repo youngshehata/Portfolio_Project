@@ -1,0 +1,96 @@
+.trigger {
+  cursor: pointer;
+  filter: var(--accentFilter);
+}
+
+.textAreaTrigger {
+  align-self: flex-start;
+}
+
+/* overlay covers full screen */
+.dialogOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+}
+
+/* WRAPPER = handles fixed centering */
+.dialogWrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vmax;
+  max-width: 90vw;
+}
+
+/* CONTENT = actual dialog box */
+.dialogContent {
+  position: relative; /* so closeBtn absolute works */
+  /* background: rgb(228, 228, 228); */
+  background-color: var(--primColor);
+  border: 0.2vmax var(--oppositColor) solid;
+  border-radius: 0.4vmax;
+  padding: 1rem;
+  width: 100%; /* inherit wrapper width */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.title {
+  color: var(--primColor);
+  color: var(--accentColor);
+  opacity: 0.7;
+  font-size: 1.5vmax;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+/* CLOSE BUTTON = absolute top-right */
+.closeBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  height: 1.5vmax;
+  width: 1.5vmax;
+  cursor: pointer;
+  filter: var(--accentFilter);
+}
+
+.input,
+.textArea {
+  width: 100%;
+  font-size: 1.7vmax;
+  padding: 0.35vmax 1.5vmax;
+  text-align: center;
+  border-radius: 0.25vmax;
+  border: 0.15vmax var(--accentColor) solid;
+  margin: 1vmax 0;
+  color: #000;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.5vmax;
+  margin-bottom: 0.5vmax;
+}
+
+.button {
+  font-size: 1.6vmax;
+  background-color: var(--accentColor);
+  color: var(--primColor);
+  padding: 0.15vmax 1.5vmax;
+  border-radius: 0.4vmax;
+  border: 0.1vmax var(--primColor) solid;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--darkBorder) 2px 2px 3px;
+}
+
+.button:hover {
+  transform: scale(1.02);
+  box-shadow: var(--darkBorder) 4px 4px 6px;
+}

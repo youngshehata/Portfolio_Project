@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  margin: 0.5vmax 0;
+  background-color: color-mix(in srgb, var(--lightBorder) 15%, transparent);
+  border-radius: 0.25vmax;
+  font-size: 1.2vmax;
+}
+.container td {
+  padding: 0.5vmax;
+}
+
+.icon {
+  width: 2.5vmax;
+  height: 2.5vmax;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.15vmax;
+  border: 0.1vmax var(--accentColor) solid;
+}
+
+.checked {
+  height: 1.7vmax;
+  height: 1.7vmax;
+  filter: var(--accentFilter);
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.buttonsContainer button {
+  font-size: 1.1vmax;
+  min-width: 4vmax;
+  border-radius: 0.24vmax;
+  padding: 0.15vmax 1vmax;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #fff;
+  box-shadow: rgba(76, 76, 76, 0.552) 2px 2px 3px;
+  opacity: 0.9;
+  transition: all 0.2s ease-in-out;
+}
+.buttonsContainer button:hover {
+  opacity: 1;
+  box-shadow: rgba(76, 76, 76, 0.552) 4px 4px 6px;
+}
+.edit {
+  background-color: #00469a;
+  margin-right: 1.5vmax;
+}
+.delete {
+  background-color: #9a0000;
+}

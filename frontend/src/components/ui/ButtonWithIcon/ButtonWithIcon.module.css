@@ -1,0 +1,42 @@
+.container {
+  background-color: var(--lighterGray);
+  color: #000;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: 100%;
+  align-items: center;
+  position: relative;
+  padding: 0.3vmax 1.5vmax;
+  border-radius: 0.35vmax;
+  cursor: pointer;
+  border: 0.15vmax #000 solid;
+  margin-left: 1.5vmax;
+  transition: all 0.2s ease-in-out;
+  box-shadow: rgba(124, 124, 124, 0.3) 2px 2px 3px;
+}
+.container:hover {
+  border: 0.15vmax #ffffff solid;
+}
+.active {
+  background-color: #ffffff;
+  transform: scale(1.015);
+}
+
+.label {
+  font-size: 1.2vmax;
+  margin-left: 0.5vmax;
+}
+.icon {
+  width: 1.5vmax;
+  height: 1.5vmax;
+  margin: 0 0.25vmax;
+}
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .container {
+    padding: 0.5vmax 2.5vmax;
+    margin-left: 0;
+  }
+}

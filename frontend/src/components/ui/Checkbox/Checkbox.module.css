@@ -1,0 +1,38 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 1.5vmax;
+  height: 1.5vmax;
+  transition: opacity 0.2s ease;
+  background-color: var(--primColor);
+}
+
+.withBorders {
+  border: 0.12vmax solid var(--oppositColor);
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.noBorders {
+  border: none;
+  opacity: 0.6; /* faded */
+}
+
+.icon {
+  width: 1.3vmax;
+  height: 1.3vmax;
+  filter: var(--accentFilter);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.checked {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.unchecked {
+  transform: scale(0.9);
+  opacity: 0.8;
+}

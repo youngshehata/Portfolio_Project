@@ -1,0 +1,53 @@
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 1.5vmax;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.button span {
+  color: #fff;
+  font-size: 1.5vmax;
+}
+.button {
+  border-color: var(--darkBorder);
+}
+.button:hover {
+  border-color: var(--accentColor);
+}
+
+.cv {
+  background-color: #be0000;
+}
+.contact {
+  background-color: #0070c0;
+  margin-left: 2vmax;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .container {
+    height: auto;
+    justify-content: center;
+  }
+  .button span {
+    font-size: 2.3vmax;
+  }
+
+  .button img {
+    height: 2.3vmax;
+    width: 2.3vmax;
+  }
+
+  .contact {
+    margin-left: 2vmax;
+  }
+}

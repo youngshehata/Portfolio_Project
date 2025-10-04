@@ -1,0 +1,109 @@
+.container {
+  align-self: flex-end;
+  margin-bottom: 1vmax;
+  max-height: 85%;
+  width: 100%;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border-radius: 1vmax;
+  border: 0.15vmax var(--primColor) solid;
+  background-color: color-mix(in srgb, var(--lightBorder) 20%, transparent);
+  overflow: scroll;
+}
+
+.title {
+  position: sticky;
+  top: 0;
+  margin-bottom: 1vmax;
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-start;
+  border: 0.15vmax var(--primColor) solid;
+  border-bottom-right-radius: 1vmax;
+  background-color: var(--primColor);
+  padding: 0.4vmax 0.6vmax;
+  font-size: 1.4vmax;
+  z-index: 20;
+}
+
+.list {
+  /* min-height: 90vh; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  align-content: flex-start;
+  justify-items: center;
+  padding-bottom: 2vmax;
+}
+
+.li {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  margin: 0.3vmax 0;
+  justify-content: flex-start;
+}
+
+.li main {
+  width: 100%;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .container {
+    position: relative;
+    margin-top: 1vmax;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    height: fit-content;
+    width: 90%;
+    justify-self: center;
+    align-self: unset;
+    margin-top: 3vmax;
+    max-height: unset;
+    margin-bottom: 3vmax;
+  }
+  .title {
+    margin-bottom: 1vmax;
+    padding: 0.5vmax 0.9vmax;
+    font-size: 2vmax;
+  }
+
+  .list {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    min-height: 30%;
+    max-height: 30%;
+  }
+
+  .li {
+    position: relative;
+    width: 80%;
+    margin: 0.5vmax 0;
+    justify-content: flex-start;
+  }
+
+  .li main {
+    width: 100%;
+  }
+  .skillClass {
+    padding: 0.75vmax;
+    border-radius: 0.75vmax;
+  }
+  .skillClass img {
+    height: 2.2vmax;
+    width: 2.2vmax;
+  }
+  .skillClass span {
+    font-size: 1.6vmax;
+    font-weight: 500;
+  }
+}

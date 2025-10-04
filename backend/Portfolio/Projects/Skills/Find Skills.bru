@@ -1,0 +1,20 @@
+meta {
+  name: Find Skills
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:3000/projects/skills/3?page=1&pageSize=1
+  body: json
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  pageSize: 1
+}
+
+settings {
+  encodeUrl: true
+}

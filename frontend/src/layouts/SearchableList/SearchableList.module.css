@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 80% 10%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  place-items: center;
+}
+
+.headers {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2vmax;
+}
+.headerValue {
+  margin-left: 1vmax;
+  font-size: 1.4vmax;
+  color: var(--accentColor);
+}
+
+.searchListContainer {
+  width: 95%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 90%;
+  padding: 1vmax;
+  border: 0.1vmax var(--lightBorder) solid;
+  border-radius: 0.6vmax;
+}
+
+.inputSearch {
+  width: 70%;
+  align-self: center;
+  justify-self: center;
+}
+.inputSearch input {
+  font-size: 1.3vmax;
+}

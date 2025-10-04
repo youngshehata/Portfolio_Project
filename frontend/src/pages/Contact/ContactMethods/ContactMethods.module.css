@@ -1,0 +1,142 @@
+.container {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(67, 67, 67, 0.31);
+  border-radius: 1vmax;
+  border: 0.15vmax var(--primColor) solid;
+}
+
+.title {
+  margin-top: 1vmax;
+  width: 100%;
+  padding: 0.5vmax 3vmax;
+  font-size: 1.4vmax;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.underline {
+  height: 0.1vmax;
+  width: 30%;
+  margin-left: 2.5vmax;
+  background-color: var(--oppositColor);
+  border-radius: 0.3vmax;
+  align-self: flex-start;
+  opacity: 0.8;
+}
+
+.list {
+  width: 90%;
+  margin-top: 1vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  height: 100%;
+}
+.contactMethodContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 100%;
+  margin: 1vmax 0;
+  align-items: center;
+}
+.contactMethod {
+  justify-content: space-between;
+  min-width: 40%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 100%;
+}
+.contactMethod span {
+  font-size: 1.2vmax;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 0.5vmax;
+}
+.contactMethod img {
+  box-shadow: var(--oppositColor) 1px 1px 2px;
+}
+
+.valueContainer {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: 100%;
+  background-color: var(--oppositColor);
+  width: 100%;
+  height: fit-content;
+  border-radius: 0.4vmax;
+}
+.valueContainer span {
+  font-weight: 600;
+  font-size: 1.4vmax;
+  color: var(--primColor);
+  padding: 0.25vmax 1vmax;
+  text-align: center;
+  width: 100%;
+}
+.valueContainer img {
+  height: 2vmax;
+  width: 2vmax;
+  margin-right: 0.5vmax;
+  z-index: 20;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  opacity: 0.8;
+  background-color: var(--primColors);
+  filter: var(--primFilter);
+}
+.valueContainer img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .container {
+    margin-top: 5vmax;
+    align-self: flex-start;
+    height: fit-content;
+    overflow: visible;
+  }
+  .title {
+    font-size: 2.1vmax;
+  }
+
+  .underline {
+    width: 38%;
+    margin-left: 3vmax;
+  }
+  .contactMethodContainer {
+    grid-template-columns: 20% 80%;
+  }
+  .contactMethodContainer:last-of-type {
+    margin-bottom: 3vmax;
+  }
+  .contactMethod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactMethod span {
+    display: none;
+  }
+
+  .valueContainer span {
+    font-weight: 600;
+    font-size: 1.9vmax;
+    padding: 0.5vmax 1vmax;
+  }
+  .valueContainer img {
+    height: 2.5vmax;
+    width: 2.5vmax;
+  }
+}

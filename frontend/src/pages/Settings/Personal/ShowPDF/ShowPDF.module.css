@@ -1,0 +1,34 @@
+.container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.close {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  height: 1.5vmax;
+  width: 1.5vmax;
+  filter: var(--accentFilter);
+  cursor: pointer;
+}
+
+.pdfContainer {
+  position: relative;
+  height: 95%;
+  width: 90%;
+}
+
+.pdf {
+  height: 100%;
+  width: 100%;
+}

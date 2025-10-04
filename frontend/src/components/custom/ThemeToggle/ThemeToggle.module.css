@@ -1,0 +1,50 @@
+.toggle {
+  border-radius: 50%;
+  background-color: var(--primColor);
+  height: 2vmax;
+  width: 2vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 0.15vmax transparent solid;
+  align-self: center;
+  margin-right: 1vmax;
+}
+
+.toggle:hover {
+  border: 0.1vmax var(--accentColor) solid;
+}
+
+.toggle img {
+  height: 1.3vmax;
+  width: 1.3vmax;
+  border-radius: 50%;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .toggle {
+    position: absolute;
+    height: 3.5vmax;
+    width: 3.5vmax;
+    align-self: flex-end;
+    /* margin-top: 1%; */
+  }
+
+  .toggle:hover {
+    border: 0.15vmax var(--accentColor) solid;
+  }
+
+  .toggle img {
+    height: 2.5vmax;
+    width: 2.5vmax;
+  }
+
+  .expanded {
+    top: 1vh;
+  }
+}

@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 100%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  place-items: center;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .container {
+    height: fit-content;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+    overflow: scroll;
+    margin-bottom: 10vh;
+  }
+}

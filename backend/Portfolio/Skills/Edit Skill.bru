@@ -1,0 +1,21 @@
+meta {
+  name: Edit Skill
+  type: http
+  seq: 2
+}
+
+patch {
+  url: http://localhost:3000/skills/4
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "showOnPortfolio":false
+  }
+}
+
+settings {
+  encodeUrl: true
+}

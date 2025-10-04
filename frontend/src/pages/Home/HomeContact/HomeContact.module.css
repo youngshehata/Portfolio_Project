@@ -1,0 +1,43 @@
+.container {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  margin: 1.5vmax;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.list {
+  display: flex;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .container {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: unset;
+    grid-row-end: unset;
+    justify-content: center;
+    align-items: center;
+    overflow-x: visible;
+    overflow-y: hidden;
+    padding: 3vmax 2vmax 3vmax 0vmax;
+    justify-self: flex-start;
+    width: 100%;
+  }
+  .list {
+    height: fit-content;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 1.5vmax 0;
+  }
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+}

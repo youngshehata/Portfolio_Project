@@ -1,0 +1,19 @@
+meta {
+  name: Edit Image
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/personal/image
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(D:\Photos\Personal\WhatsApp Image 2025-06-28 at 08.13.17_48951ee6.jpg)
+}
+
+settings {
+  encodeUrl: true
+}

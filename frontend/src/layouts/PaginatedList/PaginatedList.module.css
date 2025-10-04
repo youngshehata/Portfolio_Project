@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 80% 10%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1vmax;
+  font-size: 1.2vmax;
+  align-items: flex-start;
+  justify-items: center;
+}
+
+.title {
+  font-size: 1.5vmax;
+  justify-self: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.listContainer {
+  position: relative;
+  height: 100%;
+  width: 85%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5vmax;
+  border: 0.15vmax rgba(128, 128, 128, 0.22) solid;
+  border-radius: 0.5vmax;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+
+@media (max-width: 750px) {
+  .container {
+    grid-template-rows: 5% 75% 20%;
+    overflow: hidden;
+  }
+  .title {
+    font-size: 2.2vmax;
+  }
+  .listContainer {
+    width: 95%;
+    padding: 1.5vmax;
+    border: 0.15vmax rgba(128, 128, 128, 0.18) solid;
+  }
+}

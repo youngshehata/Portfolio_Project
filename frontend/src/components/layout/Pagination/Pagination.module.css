@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.rotated180 {
+  transform: rotate(180deg);
+}
+
+.forwardArror,
+.nextArrow {
+  filter: var(--primFilter);
+  cursor: pointer;
+  height: 1.3vmax;
+  width: 1.3vmax;
+  margin: 0.25vmax 0.5vmax;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.9;
+}
+
+.forwardArror:hover,
+.nextArrow:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.rotated180:hover {
+  transform: rotate(180deg) scale(1.1);
+  opacity: 1;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+
+@media (max-width: 750px) {
+  .container {
+    margin-top: 2vmax;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .forwardArror,
+  .nextArrow {
+    height: 2.3vmax;
+    width: 2.3vmax;
+    margin: 0.75vmax 1.5vmax;
+    opacity: 1;
+  }
+
+  .text {
+    font-size: 2vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.75vmax 1.5vmax;
+  }
+
+  .forwardArror:hover,
+  .nextArrow:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  .rotated180:hover {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 1;
+  }
+}

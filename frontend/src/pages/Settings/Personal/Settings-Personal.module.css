@@ -1,0 +1,138 @@
+.container {
+  width: 100%;
+  display: grid;
+  padding: 1vmax;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: auto auto auto;
+  align-items: flex-start;
+}
+
+.editableInput {
+  margin: 1vmax 0;
+}
+.editableInput * {
+  font-size: 1.2vmax;
+}
+
+.nameInput {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.titleInput {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.aboutInput {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.aboutInput textarea {
+  width: 100%;
+  min-height: 28vh;
+}
+.aboutInput textarea::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.img {
+  height: 12vmax;
+  width: 12vmax;
+  border-radius: 50%;
+  border: 0.2vmax var(--darkBorder) solid;
+  background-color: var(--darkBorder);
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--darkBorder) 3px 3px 3px;
+}
+
+.changeImg {
+  font-size: 0.9vmax;
+  font-weight: 600;
+  margin-top: 0.35vmax;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.changeImg:hover {
+  color: var(--accentColor);
+}
+
+.rightSideContainer {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 2vmax;
+}
+
+.cvContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1.5vmax;
+  background-color: color-mix(in srgb, var(--darkBorder) 20%, transparent);
+  padding: 1vmax;
+  border-radius: 0.25vmax;
+  border: 0.15vmax var(--darkBorder) solid;
+  overflow: hidden;
+  max-width: 40%;
+}
+.cvContainer img {
+  filter: var(--primFilter);
+  height: 5vmax;
+}
+.cvContainer span {
+  background-color: color-mix(in srgb, var(--darkBorder) 50%, transparent);
+  padding: 0.1vmax 0.3vmax;
+  border-radius: 0.15vmax;
+  margin: 0.5vmax 0;
+  font-size: 0.8vmax;
+  font-weight: 600;
+}
+.cvContainer button {
+  width: 70%;
+  font-size: 0.9vmax;
+  margin: 0.25vmax;
+  border-radius: 0.25vmax;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.1vmax 0.5vmax;
+  transition: all 0.2s ease-in-out;
+  border: 0.15vmax var(--darkBorder) solid;
+  opacity: 0.85;
+}
+
+.cvContainer button:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+.view {
+  background-color: rgb(36, 36, 36);
+  color: #fff;
+}
+.change {
+  background-color: darkgreen;
+  color: #fff;
+}

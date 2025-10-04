@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primColor);
+  display: flex;
+  border-radius: 5vmax;
+  border: 0.15vmax var(--oppositColor) solid;
+  overflow: hidden;
+  padding: 0.3vmax 1vmax;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  position: absolute;
+  width: 1.5vmax;
+  height: 1.5vmax;
+  filter: var(--accentFilter);
+  left: 2%;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.icon:hover {
+  transform: scale(1.1);
+}
+.input {
+  background-color: transparent;
+  height: 100%;
+  width: 90%;
+  font-size: 1.2vmax;
+  color: var(--oppositColor);
+  border: none;
+  outline: none;
+  text-align: center;
+}

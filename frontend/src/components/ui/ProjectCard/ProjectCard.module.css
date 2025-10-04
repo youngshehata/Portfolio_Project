@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  height: 40%;
+  background-color: var(--primColor);
+  width: 100%;
+  margin: 1vmax 0;
+  border-radius: 0.6vmax;
+  border: 0.15vmax var(--darkBorder) solid;
+  padding: 0.5vmax;
+  display: grid;
+  grid-template-columns: 60% 15% 25%;
+  grid-template-rows: 100%;
+  overflow: hidden;
+}
+
+.titleAndOverview {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 1.6vmax;
+  color: var(--accentColor);
+  font-style: italic;
+}
+.overview {
+  margin-top: 0.75vmax;
+  padding-right: 1vmax;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+
+@media (max-width: 750px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-rows: 41% 18% 41%;
+    margin: unset;
+    margin-bottom: 6vmax;
+    padding: 1.5vmax;
+    height: 80%;
+    border: 0.15vmax var(--lightBorder) solid;
+  }
+  .title {
+    font-size: 2.3vmax;
+  }
+  .overview {
+    font-size: 2vmax;
+  }
+}

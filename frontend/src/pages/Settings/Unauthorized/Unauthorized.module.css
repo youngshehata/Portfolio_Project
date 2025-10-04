@@ -1,0 +1,86 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 100%;
+}
+.lockedImg {
+  height: 20vmax;
+  width: 20vmax;
+  padding: 0vmax;
+  margin-bottom: 2vmax;
+}
+
+.text {
+  font-size: 2vmax;
+  margin: 2vmax;
+  text-align: center;
+}
+
+.input {
+  font-size: 1.7vmax;
+  padding: 0.15vmax 2vmax;
+  border-radius: 0.5vmax;
+  text-align: center;
+  min-width: 20%;
+  color: #000;
+  outline: none;
+  border: 0.15vmax var(--oppositColor) solid;
+}
+
+.button {
+  margin-top: 2vmax;
+  background-color: #c00000;
+  padding: 0.1vmax 3vmax;
+  border-radius: 5vmax;
+}
+.button:hover {
+  border: 0.15vmax #000 solid;
+}
+.button span {
+  font-size: 1.7vmax;
+  color: #fff;
+}
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .lockedImg {
+    height: 25vmax;
+    width: 25vmax;
+    padding: 0vmax;
+    margin-bottom: 3vmax;
+  }
+
+  .text {
+    font-size: 3.5vmax;
+    margin: 2vmax;
+  }
+
+  .input {
+    margin-top: 2vmax;
+    font-size: 2.7vmax;
+    padding: 0.15vmax 3vmax;
+    min-width: 30%;
+  }
+
+  .button {
+    margin-top: 3vmax;
+    background-color: #c00000;
+    border-radius: 0.8vmax;
+    padding: 0.5vmax 3vmax;
+    min-width: 25%;
+  }
+
+  .button span {
+    font-size: 3vmax;
+    color: #fff;
+  }
+  .button img {
+    height: 2.5vmax;
+    width: 2.5vmax;
+  }
+}

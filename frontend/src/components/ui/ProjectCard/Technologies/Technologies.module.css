@@ -1,0 +1,114 @@
+.container {
+  border-left: 0.2vmax var(--darkBorder) solid;
+  border-right: 0.2vmax var(--darkBorder) solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  opacity: 0.9;
+  font-size: 1.3vmax;
+  color: var(--accentColor);
+  font-style: italic;
+  margin-bottom: 0.5vmax;
+  position: sticky;
+  top: 0;
+  background-color: var(--primColor);
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+.skillClass {
+  width: 90%;
+  overflow: hidden;
+  min-width: unset;
+  margin: 0.5vmax 0;
+}
+
+.skillClass div {
+  overflow: visible;
+}
+.skillClass span {
+  display: inline-block; /* or block */
+  max-width: 90%; /* or width: 90% */
+  overflow: scroll;
+  text-overflow: unset; /* optional if you want ... */
+  white-space: nowrap; /* optional if you want it in one line */
+  font-size: 1.1vmax;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+
+@media (max-width: 750px) {
+  .container {
+    margin-top: 0.5vmax;
+    border-top: 0.2vmax var(--darkBorder) solid;
+    border-bottom: 0.2vmax var(--darkBorder) solid;
+    border-left: unset;
+    border-right: unset;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    opacity: 0.7;
+    font-size: 1.6vmax;
+    color: var(--oppositColor);
+    margin-top: 0vmax;
+    text-align: start;
+  }
+
+  .list {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .list::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  .skillClass {
+    /* width: 100%; */
+    overflow: visible;
+    min-width: fit-content;
+    margin: 0.5vmax 1vmax;
+    border-radius: 0.75vmax;
+    padding: 0.15vmax;
+  }
+
+  .skillClass div {
+    overflow: hidden;
+    margin-left: 1vmax;
+    padding: 0.5vmax;
+  }
+
+  .skillClass img {
+    height: 2vmax;
+    width: 2vmax;
+  }
+
+  .skillClass span {
+    font-size: 1.5vmax;
+    padding-right: 1vmax;
+    padding-left: 0.5vmax;
+  }
+}

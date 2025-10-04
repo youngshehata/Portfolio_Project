@@ -1,0 +1,76 @@
+.container {
+  background-color: color-mix(in srgb, var(--lightBorder) 50%, transparent);
+  /* background-color: color-mix(in srgb, var(--darkBorder) 50%, transparent); */
+  display: flex;
+  margin: 0.25vmax;
+  width: 100%;
+  height: 100%;
+  min-width: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35vmax;
+  border-radius: 0.3vmax;
+}
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25vmax;
+  border-radius: 50%;
+  background-color: #fff;
+  overflow: hidden;
+  margin-right: 0.5vmax;
+}
+.image {
+  width: 1.5vmax;
+  height: 1.5vmax;
+}
+.name {
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1.2vmax;
+  max-width: 75%;
+  overflow: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  transition: all 0.2s ease-in-out;
+  scroll-behavior: smooth;
+}
+.scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .container {
+    background-color: color-mix(in srgb, var(--darkBorder) 50%, transparent);
+    display: flex;
+    margin: 0.25vmax;
+    width: 100%;
+    min-width: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35vmax;
+    border-radius: 0.3vmax;
+  }
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25vmax;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    margin-right: 0.5vmax;
+  }
+  .name {
+    color: var(--text);
+    font-weight: 600;
+    overflow-x: scroll;
+  }
+}

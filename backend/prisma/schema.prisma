@@ -1,0 +1,104 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Errors {
+  id      Int      @id @default(autoincrement())
+  message String   @db.VarChar(10000)
+  ip      String?  @db.VarChar(100)
+  time    DateTime @default(now()) @db.Timestamp(6)
+  path    String?  @db.VarChar(200)
+  method  String?  @db.VarChar(100)
+  isHttp  Boolean?
+  stack   String?  @db.VarChar(50000)
+}
+
+model skills {
+  id              Int               @id @default(autoincrement())
+  name            String            @db.VarChar(2000)
+  icon            String            @default("default.svg") @db.VarChar(2000)
+  showOnPortfolio Boolean           @default(false)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  Projects_Skills Projects_Skills[]
+}
+
+model Logs {
+  id         Int        @id @default(autoincrement())
+  log        String     @db.VarChar
+  type       Int        @db.SmallInt
+  date       DateTime   @default(now()) @db.Timestamp(6)
+  ip         String?    @db.VarChar(100)
+  Logs_Types Logs_Types @relation(fields: [type], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Logs_LogsType_FK")
+}
+
+model Logs_Types {
+  id   Int    @id @default(autoincrement()) @db.SmallInt
+  type String @db.VarChar(100)
+  Logs Logs[]
+}
+
+model Personal {
+  id    Int    @id @default(autoincrement()) @db.SmallInt
+  name  String @db.VarChar(200)
+  title String @db.VarChar(300)
+  image String @db.VarChar(500)
+  about String @db.VarChar(10000)
+  cv    String @db.VarChar(500)
+}
+
+model Contacts {
+  id            Int     @id @default(autoincrement()) @db.SmallInt
+  name          String  @db.VarChar(100)
+  value         String  @db.VarChar(1500)
+  icon          String? @db.VarChar(500)
+  showOnContact Boolean @default(true)
+  showOnHome    Boolean @default(false)
+}
+
+model Projects {
+  id              Int               @id @default(autoincrement()) @db.SmallInt
+  name            String            @db.VarChar(500)
+  overview        String?           @db.VarChar
+  url             String?           @db.VarChar(1000)
+  github          String?           @db.VarChar(1000)
+  Projects_Images Projects_Images[]
+  Projects_Skills Projects_Skills[]
+}
+
+model Projects_Images {
+  id       Int      @id @default(autoincrement()) @db.SmallInt
+  project  Int      @db.SmallInt
+  path     String   @db.VarChar(500)
+  order    Int      @default(1) @db.SmallInt
+  Projects Projects @relation(fields: [project], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "ProjectImages_Projects_FK")
+}
+
+model Projects_Skills {
+  id       Int      @id @default(autoincrement()) @db.SmallInt
+  project  Int      @db.SmallInt
+  skill    Int      @db.SmallInt
+  Projects Projects @relation(fields: [project], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "ProjectSkill_Project_FK")
+  skills   skills   @relation(fields: [skill], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "ProjectSkill_Skill_FK")
+}
+
+model Experiences {
+  id        Int     @id @default(autoincrement()) @db.SmallInt
+  challenge String  @db.VarChar
+  solution  String  @db.VarChar
+  visible   Boolean @default(true)
+}
+
+model Messages {
+  id      Int      @id @default(autoincrement())
+  title   String   @db.VarChar(1000)
+  from    String   @db.VarChar(500)
+  message String   @db.VarChar(20000)
+  date    DateTime @default(now()) @db.Timestamp(6)
+  isRead  Boolean  @default(false)
+}

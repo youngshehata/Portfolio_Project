@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  height: 2.5vmax;
+  width: 2.5vmax;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.15vmax #000 solid;
+  padding: 0.25vmax;
+  margin: 0 1vmax;
+  cursor: pointer;
+  overflow-clip-margin: padding-box;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--darkBorder) 2px 2px 3px;
+}
+
+.image:hover {
+  transform: scale(1.06);
+  box-shadow: var(--darkBorder) 4px 4px 6px;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .image {
+    height: 4vmax;
+    width: 4vmax;
+    padding: 0.5vmax;
+    margin: 0 1.5vmax;
+  }
+}

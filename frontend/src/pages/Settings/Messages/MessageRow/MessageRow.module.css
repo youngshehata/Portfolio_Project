@@ -1,0 +1,50 @@
+.merger {
+  margin: 0.5vmax 0;
+}
+.container {
+  position: relative;
+  background-color: var(--primColor);
+  border: 0.15vmax darkred solid;
+  border-radius: 0.35vmax;
+  height: 30vh;
+  padding: 0.5vmax 1vmax 0 2vmax;
+  display: grid;
+  place-items: start;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 20% 80%;
+  cursor: pointer;
+}
+.read {
+  border: 0.15vmax var(--darkBorder) solid;
+  cursor: default;
+}
+.index {
+  position: absolute;
+  top: 0vmax;
+  left: 0vmax;
+  color: var(--oppositColor);
+  font-size: 0.85vmax;
+  font-weight: 600;
+  padding: 0.25vmax;
+  background-color: var(--primColor);
+  border-right: 0.15vmax darkred solid;
+  border-bottom: 0.15vmax darkred solid;
+  border-bottom-right-radius: 0.5vmax;
+  border-top-left-radius: 0.5vmax;
+}
+.indexRead {
+  border-right: 0.15vmax var(--darkBorder) solid;
+  border-bottom: 0.15vmax var(--darkBorder) solid;
+}
+
+.message {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 0.5vmax;
+  border: 0.15vmax color-mix(in srgb, var(--darkBorder) 20%, transparent) solid;
+  border-radius: 0.25vmax;
+  height: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}

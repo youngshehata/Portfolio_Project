@@ -1,0 +1,23 @@
+meta {
+  name: Create Project
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/projects
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Project Again",
+    "overview": "Point Of Sale application bui Sale application bu Sale application bu Sale application bu Sale application bult using MERN stack",
+    "url": "https://youtube.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

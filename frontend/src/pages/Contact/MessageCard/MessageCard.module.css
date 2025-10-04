@@ -1,0 +1,116 @@
+.container {
+  position: relative;
+  height: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(67, 67, 67, 0.31);
+  border-radius: 1vmax;
+  border: 0.15vmax var(--primColor) solid;
+}
+.title {
+  margin-top: 1vmax;
+  width: 100%;
+  padding: 0.5vmax 2.5vmax;
+  font-size: 1.4vmax;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.underline {
+  height: 0.1vmax;
+  width: 35%;
+  margin-left: 2.5vmax;
+  background-color: var(--oppositColor);
+  border-radius: 0.3vmax;
+  align-self: flex-start;
+  opacity: 0.8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  height: 100%;
+  padding-top: 1.5vmax;
+  overflow: hidden;
+}
+
+.input,
+.textArea {
+  width: 80%;
+  font-size: 1.2vmax;
+  padding: 0.25vmax 1vmax;
+  border-radius: 0.3vmax;
+  text-align: center;
+  margin: 0.5vmax 0;
+  background-color: #fff;
+  color: #000;
+  border: 0.15vmax var(--darkBorder) solid;
+  box-shadow: rgba(128, 128, 128, 0.3) 2px 2px 3px;
+}
+
+.textArea {
+  font-size: 1.2vmax;
+  height: 60%;
+  border-radius: 0.4vmax;
+}
+
+.button {
+  margin-top: 1vmax;
+  font-size: 1.4vmax;
+  background-color: green;
+  color: #fff;
+  width: 50%;
+  border-radius: 0.35vmax;
+  border: 0.2vmax #fff solid;
+  box-shadow: rgba(128, 128, 128, 0.4) 2px 2px 3px;
+}
+.button:hover {
+  box-shadow: rgba(128, 128, 128, 0.5) 4px 4px 5px;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .container {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: flex-end;
+    height: 95%;
+    padding-bottom: 2vmax;
+  }
+  .title {
+    font-size: 2.1vmax;
+  }
+
+  .form {
+    width: 100%;
+    height: 100%;
+  }
+
+  .input,
+  .textArea {
+    font-size: 1.9vmax;
+    border-radius: 0.4vmax;
+    margin: 1vmax 0;
+  }
+
+  .textArea {
+    font-size: 1.9vmax;
+    height: 60%;
+    border-radius: 0.5vmax;
+  }
+
+  .button {
+    margin-top: 1vmax;
+    font-size: 2.2vmax;
+  }
+}

@@ -1,0 +1,22 @@
+.valueContainer {
+  background-color: var(--oppositColor);
+  padding: 0.5vmax 1vmax;
+  border-radius: 0.3vmax;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2vmax;
+}
+
+.valueContainer input,
+.valueContainer textarea {
+  background-color: var(--oppositColor);
+  color: var(--primColor);
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.valueContainer {
+  margin-top: 0.2vmax;
+}

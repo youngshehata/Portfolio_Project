@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4vmax;
+}
+
+.titleContainer {
+  position: relative;
+  align-self: flex-start;
+  margin-left: 1vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1vmax;
+}
+.title {
+  position: relative;
+  background-color: var(--primColor);
+  color: var(--lightBorder);
+  font-size: 1.3vmax;
+  z-index: 1;
+  font-style: italic;
+  padding: 0.2vmax 0.5vmax;
+}
+.underline {
+  position: absolute;
+  width: 200%;
+  height: 0.1vmax;
+  background-color: var(--lightBorder);
+  border-radius: 0.3vmax;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imgContainer span {
+  font-size: 1vmax;
+  margin-top: 0.5vmax 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.img {
+  height: 7vmax;
+  width: 7vmax;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.15vmax;
+  border: 0.2vmax var(--darkBorder) solid;
+}
+
+.inputContainer {
+  margin: 0.5vmax 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+}
+
+.input {
+  border: 0.2vmax var(--darkBorder) solid;
+  border-radius: 0.35vmax;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2vmax;
+  padding: 0.15vmax 1vmax;
+  text-align: center;
+  background-color: var(--oppositColor);
+  color: var(--primColor);
+  margin: 0.75vmax 0;
+}
+
+.label {
+  font-size: 1.2vmax;
+  margin-right: 1vmax;
+}
+
+.button {
+  margin: 1vmax 0;
+  background-color: var(--accentColor);
+  color: var(--primColor);
+  font-size: 1.3vmax;
+  border-radius: 0.25vmax;
+  padding: 0.15vmax 1vmax;
+  min-width: 20%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.button:hover {
+  transform: scale(1.02);
+}

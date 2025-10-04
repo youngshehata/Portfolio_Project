@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "abelregular";
+  src: url("/fonts/abel-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: abelregular;
+  color: var(--text);
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  width: 100%;
+  padding: 0 !important;
+}
+
+body {
+  transition: all 0.2s ease-in-out;
+  background-image: var(--bg);
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content,
+.layout {
+  position: relative;
+  /* height: auto; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+input,
+input:active,
+input:focus,
+textarea,
+textarea:active,
+textarea:focus {
+  outline: none;
+}
+
+.scroll {
+  overflow: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  transition: all 0.2s ease-in-out;
+  scroll-behavior: smooth;
+}
+.scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.flex_row_center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_column_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.buttonHover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.buttonHover:hover {
+  transform: translateX(-0.15vmax) translateY(-0.2vmax);
+}
+
+[data-rht-toaster] {
+  font-size: 1.2vmax !important;
+  font-weight: 600;
+}
+
+/* ==========================================         -----        =================================== */
+/* ==========================================         PHONE        =================================== */
+/* ==========================================         -----        =================================== */
+@media (max-width: 750px) {
+  .content {
+    position: relative;
+    justify-content: center;
+    height: 94vh;
+    top: 6vh;
+    overflow-y: hidden;
+  }
+  .layout {
+    overflow-y: hidden;
+  }
+
+  .react-hot-toast {
+    font-size: 6vmax; /* adjust for smaller screens */
+  }
+
+  [data-rht-toaster] {
+    font-size: 1.8vmax !important;
+    font-weight: 600;
+  }
+}
