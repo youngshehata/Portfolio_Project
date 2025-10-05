@@ -96,8 +96,6 @@ export class PersonalService implements OnModuleInit {
   async getCvPath() {
     const data = (await this.getPersonalData()).cv;
     const filePath = path.join(process.cwd(), 'public/personal', data);
-    console.log(filePath);
-
     return filePath;
   }
 }

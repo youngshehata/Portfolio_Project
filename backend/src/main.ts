@@ -5,6 +5,8 @@ import { PrismaService } from 'prisma/prisma.service';
 import { ValidationPipe } from '@nestjs/common';
 import { createPublicFolders } from '@common/helpers/create-public-folders';
 import { initializeSessions } from '@common/helpers/init-sessions';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 async function bootstrap() {
   //! Password is a must , therefore it should be set

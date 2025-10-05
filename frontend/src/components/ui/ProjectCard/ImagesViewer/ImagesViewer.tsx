@@ -108,7 +108,7 @@ export default function ImagesViewer({
       ) : null}
 
       {/* ================== Image Container ======================= */}
-      {images.length > 1 ? (
+      {images.length >= 1 ? (
         <div className={styles.imageContainer}>
           <div onClick={handleClickZoom} className={styles.zoomElement}>
             <img src="/icons/zoom.svg" alt="zoom" />
