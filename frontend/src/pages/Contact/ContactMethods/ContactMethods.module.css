@@ -117,6 +117,8 @@
   }
   .contactMethodContainer {
     grid-template-columns: 20% 80%;
+    align-content: start;
+    justify-items: start;
   }
   .contactMethodContainer:last-of-type {
     margin-bottom: 3vmax;

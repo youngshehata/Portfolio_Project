@@ -30,7 +30,12 @@ export default function MessageCard() {
       return toast.error(
         "All fields are required, with a minimum of 2 characters"
       );
-    ContactAPI.sendMessage(formData)
+    ContactAPI.sendMessage({
+      ...formData,
+      id: 0,
+      isRead: false,
+      date: new Date().toString(),
+    })
       .then(() => {
         toast.success("Message delivered, Thank you for getting in touch");
         setFormData({
