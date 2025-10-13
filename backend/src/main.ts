@@ -6,6 +6,7 @@ import { ValidationPipe } from '@nestjs/common';
 import { createPublicFolders } from '@common/helpers/create-public-folders';
 import { initializeSessions } from '@common/helpers/init-sessions';
 import * as dotenv from 'dotenv';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 dotenv.config();
 
 async function bootstrap() {
@@ -19,6 +20,16 @@ async function bootstrap() {
   createPublicFolders();
   const app = await NestFactory.create(AppModule);
   initializeSessions(app);
+
+  //! Swagger
+  const config = new DocumentBuilder()
+    .setTitle('Cats example')
+    .setDescription('The cats API description')
+    .setVersion('1.0')
+    .addTag('cats')
+    .build();
+  const documentFactory = () => SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, documentFactory);
 
   //! Global Exception Filter
   app.useGlobalFilters(
