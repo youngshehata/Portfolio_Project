@@ -32,9 +32,9 @@ export default function MessageCard() {
       );
     ContactAPI.sendMessage({
       ...formData,
-      id: 0,
+      // id: 0,
       isRead: false,
-      date: new Date().toString(),
+      // date: new Date().toString(),
     })
       .then(() => {
         toast.success("Message delivered, Thank you for getting in touch");
